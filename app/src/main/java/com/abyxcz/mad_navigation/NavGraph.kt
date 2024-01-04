@@ -10,11 +10,11 @@ import androidx.navigation.compose.composable
 fun NavGraph(navController: NavHostController) {
     NavHost(
         navController = navController,
-        startDestination = "main_screen"
+        startDestination = Screen.Main.route
     ) {
 
-        composable(route = "main_screen") {
-            MainScreen(onNavigateToSecondary = { })
+        composable(route = Screen.Main.route) {
+            MainScreen(onNavigateToSecondary = { navController.navigate(route = Screen.Secondary.route)})
         }
 
     }
