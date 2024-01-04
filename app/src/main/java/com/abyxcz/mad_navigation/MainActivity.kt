@@ -22,6 +22,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             MADNavigationTheme {
                 navController = rememberNavController()
+                NavGraph(navController = navController)
             }
         }
     }
